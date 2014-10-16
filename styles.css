@@ -1,15 +1,16 @@
 
 body {
-    background-color: rgb(200,200,200);
+    background-color: #CEFFFB;
     color: rgb(0,0,0);
     font-family: "Open Sans", sans-serif;
     text-align: center;
 }
 
 #content {
-    display: block;
+    display: none;
+	border: 1px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 header {
@@ -21,3 +22,13 @@ footer {
 	font-size: 90%;
 }
 
+#button {
+    border: 1px;
+	border-style: solid;
+    background-image: url('buttonBackground.jpg');
+    background-repeat: repeat-x;
+    height: 20px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}

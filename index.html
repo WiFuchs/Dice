@@ -5,6 +5,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
 		<script src="processing.js"></script>
+		<script src="dynamicFunctions.js"></script>
 	</head>
 	<body>
 		<header>
@@ -14,10 +15,11 @@
 				<canvas id="Dice" data-processing-sources="Dice.pde">
 				</canvas>
 		    </section>
-	    <footer>
+		<div id="button" onclick="hideElement('content');">Roll Die</div>
+	    <footer id='content'>
 		    Click to re-roll
 	    </footer>
 	    <br>
-	    <footer>By Will F.</footer>
+	    <footer id="content">By Will F.</footer>
 	</body>
 </html>
