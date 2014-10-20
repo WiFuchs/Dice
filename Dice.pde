@@ -18,13 +18,26 @@ void setup()
 }
 void draw() {
   background(35, 200, 255);
+  if(startRoll == true){
+    total=0;
+    if(started==true){
+      for(int i=0; i<dice.length; i++){
+       dice[i].roll();
+       dice[i].ypos = 0;
+        dice[i].rotation=0;
+       dice[i].speed=(int)(Math.random()*4+4);
+     }
+   }
+   startRoll=false;
+  }
   if(started==true){
     for(int i=0; i<dice.length; i++){
       dice[i].show();
     }
     if(dice[0].settled==true){
       textSize(26);
-      text("Total: "+total, width/2, 400);
+      //text("Total: "+total, width/2, 400);
+      changeText("Total: <b>"+total+"</b>");
     }
   } else {
     for(int i=0; i<options.length; i++) {
@@ -39,18 +52,7 @@ void draw() {
     }
   }
 }
-void mousePressed()
-{
-  total=0;
-  if(started==true){
-    for(int i=0; i<dice.length; i++){
-      dice[i].roll();
-      dice[i].ypos = 0;
-      dice[i].rotation=0;
-      dice[i].speed=(int)(Math.random()*4+4);
-    }
-  }
-}
+
 class Die //models one single dice cube
 {
   int xpos, ypos, value, finalY, speed, rotation;
